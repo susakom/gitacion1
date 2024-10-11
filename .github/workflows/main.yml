@@ -1,4 +1,4 @@
-name: Susak gitactin java
+name: Susak gitaction java
 
 # Определяем, когда запускать workflow
 on:
@@ -6,3 +6,14 @@ on:
     branches:
       - main  # Запускать workflow при push в основную ветку
   workflow_dispatch:  # Позволяет запускать workflow вручную через интерфейс GitHub
+# Определяем задачи
+jobs:
+  build:
+    # Используем общедоступный runner Ubuntu в Github runner нет ORACLE lINUX только ubuntu
+    runs-on: ubuntu-latest
+    
+    # клонирование текущего репозитария 
+    steps:
+         - name: Checkout code
+           uses: actions/checkout@v3
+           
