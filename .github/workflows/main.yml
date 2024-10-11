@@ -1,0 +1,8 @@
+name: Susak gitactin java
+
+# Определяем, когда запускать workflow
+on:
+  push:
+    branches:
+      - main  # Запускать workflow при push в основную ветку
+  workflow_dispatch:  # Позволяет запускать workflow вручную через интерфейс GitHub
